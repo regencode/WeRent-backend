@@ -1,3 +1,9 @@
+# WeRent backend
+
+## Endpoints
+
+Coming soon...
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
