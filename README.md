@@ -1,4 +1,4 @@
-# WeRent backend
+# WeRent backend - Team 2 (Hiu)
 
 ## Endpoints
 
