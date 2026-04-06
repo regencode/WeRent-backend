@@ -5,3 +5,23 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model Product {
+    id  Int @id @default(autoincrement())
+    createdAt DateTime @default(now())
+    name String
+    price Int
+    rating Float @default(0.0)
+    reviews Review[]
+}
+
+model Review {
+    id Int @id @default(autoincrement())
+    product Product @relation(fields: [productId], references: [id])
+    productId Int
+    createdAt DateTime @default(now())
+    rating Float @default(0.0)
+    numUpvotes Int @default(0)
+    description String 
+    attachmentUrl String?
+}
