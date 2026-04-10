@@ -52,14 +52,22 @@ npm run start:dev
 
 ## Making Changes
 
-1. Create a new branch for your work:
+1. Sync your fork with the main repo to get the latest changes:
+
+```bash
+git fetch upstream
+git checkout main
+git pull upstream main
+```
+
+2. Create a new branch for your work:
 
 ```bash
 git checkout -b feature/your-feature-name
 ```
 
-2. Make your changes following the existing code style (NestJS conventions)
-3. Keep your changes focused and reasonably sized
+3. Make your changes following the existing code style (NestJS conventions)
+4. Keep your changes focused and reasonably sized
 
 ## Running Checks Before Submitting
 
@@ -107,6 +115,7 @@ Closes #
 
 ## Best Practices
 
+- **Sync often**: Pull latest changes ("git pull upstream main") from upstream before starting new work and before opening a PR
 - **Commit messages**: Write clear, concise commit messages describing what changed
 - **Secrets**: Never commit API keys, passwords, or credentials to `.env`
 - **PR size**: Keep PRs focused and reasonably sized for easier review
