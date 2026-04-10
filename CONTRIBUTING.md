@@ -2,11 +2,9 @@
 
 Welcome! This guide will help you contribute to WeRent Backend as a beginner.
 
-## Finding an Issue
+## Finding a task
 
-1. Visit the [GitHub Issues](https://github.com/regencode/WeRent-backend/issues) page
-2. Look for issues tagged with labels like `good first issue`, `bug`, or `enhancement`
-3. Comment on an issue to claim it before starting work
+Visit the [GitHub Issues](https://github.com/regencode/WeRent-backend/issues) page
 
 ## Forking and Setting Up
 
