@@ -7,6 +7,11 @@ Coming soon...
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Docs: Coming soon...
+
+## Contributing
+
+To contribute please follow the [contributing guidelines](./CONTRIBUTING.md).
 
 ## Project setup
 
