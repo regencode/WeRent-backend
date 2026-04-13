@@ -75,3 +75,62 @@ $ npm run test:cov
 ```
 
 Ubah readme MDDDDDD
+
+## Swagger Documentation
+
+### 1. Install Dependencies
+```bash
+$ npm install --save @nestjs/swagger swagger-ui-express
+```
+### 2. Enable the CLI Plugin in nest-cli.json
+```json
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@nestjs/swagger",
+        "options": {
+          "classValidatorShim": false,
+          "introspectComments": true,
+          "skipAutoHttpCode": true
+        }
+      }
+    ]
+  }
+}
+```
+
+### 3. Initialize Swagger in main.ts
+
+```typescript
+import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { AppModule } from './app.module';
+
+// Configure and initialize Swagger
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  const config = new DocumentBuilder()
+    .setTitle('API Title')
+    .setDescription('API Description')
+    .setVersion('1.0')
+    .build();
+    
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+
+  await app.listen(3000);
+}
+bootstrap();
+```
+
+### 4. Run the Application
+
+```bash
+npm run start:dev
+```
+
+### 5. Access the Swagger UI at http://localhost:3000/api

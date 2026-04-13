@@ -6,6 +6,16 @@
     "webpack": true,
     "webpackConfigPath": "webpack.config.js",
     "deleteOutDir": true,
-    "watchAssets": true
+    "watchAssets": true,
+    "plugins": [
+      {
+        "name": "@nestjs/swagger",
+        "options": {
+          "classValidatorShim": false,
+          "introspectComments": true,
+          "skipAutoHttpCode": true
+        }
+      }
+    ]
   }
 }
