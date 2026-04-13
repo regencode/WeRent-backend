@@ -12,7 +12,7 @@ Visit the [GitHub Issues](https://github.com/regencode/WeRent-backend/issues) pa
 2. Clone your fork locally:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/WeRent-backend.git
+git clone https://github.com/regencode/WeRent-backend.git
 cd WeRent-backend
 ```
 
