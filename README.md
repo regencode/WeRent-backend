@@ -75,4 +75,3 @@ $ npm run test:cov
 ```
 
 Ubah readme MDDDDDD
->>>>>>> origin
