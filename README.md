@@ -18,15 +18,17 @@ To contribute please follow the [contributing guidelines](./CONTRIBUTING.md).
 1. Clone project and install npm dependencies
 
 ```bash
-$ git clone https://github.com/regencode/WeRent-backend.git 
+$ git clone https://github.com/regencode/WeRent-backend.git
 $ cd WeRent-backend
 $ npm install
 ```
 
 2. Set DATABASE_URL env variable in .env:
+
 ```
 DATABASE_URL="postgresql://username:password@localhost:5432/mydb?schema=public"
 ```
+
 Replace the placeholders with your actual database credentials:
 
 - username: Your PostgreSQL username
@@ -45,7 +47,6 @@ $ npx prisma generate
 ```bash
 $ npm run start:dev
 ```
-
 
 ## Compile and run the project
 
@@ -72,4 +73,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-ok
+
+Ubah readme MDDDDDD
+>>>>>>> origin
