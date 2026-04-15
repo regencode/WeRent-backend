@@ -1,4 +1,5 @@
-import { IsString, IsNotEmpty, IsNumber, Min, Max } from 'class-validator';
+import { Optional } from '@nestjs/common';
+import { IsString, IsNotEmpty, IsNumber, Min, Max, IsArray } from 'class-validator';
 
 export class CreateProductDto {
   @IsString()
@@ -9,4 +10,8 @@ export class CreateProductDto {
   @IsNotEmpty()
   @Min(0)
   price: number;
+
+  @IsArray()
+  @Optional()
+  imageUrls?: string[];
 }

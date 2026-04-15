@@ -12,11 +12,13 @@ export class CreateReviewDto {
   @IsNotEmpty()
   productId: number;
 
-  @IsNumber()
+  @IsString()
   @IsNotEmpty()
-  @Min(1)
-  @Max(5)
-  rating: number;
+  title: string;
+
+  @IsString()
+  @IsNotEmpty()
+  reviewerName: string;
 
   @IsString()
   @IsNotEmpty()
@@ -25,4 +27,10 @@ export class CreateReviewDto {
   @IsString()
   @IsOptional()
   attachmentUrl?: string;
+
+  @IsNumber()
+  @IsOptional()
+  @Min(1)
+  @Max(5)
+  rating?: number;
 }
