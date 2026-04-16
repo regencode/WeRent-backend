@@ -5,7 +5,7 @@
 BaseUrl: https://werent-backend-production.up.railway.app/
 
 ### App
-GET /                : Hello World!
+GET / : Hello World!
 
 ### Reviews
 DELETE /reviews/{id} : delete reviews with id={id}
@@ -24,8 +24,8 @@ GET /products : get all products (pagination not yet implemented EXTRA MILES)
 POST /products : create new product from body
 
 GET /products/{id} : get one product
-DELETE /products/{id} : delete one product and its reviews (cascade)
 
+DELETE /products/{id} : delete one product and its reviews (cascade)
 
 
 ## Description
