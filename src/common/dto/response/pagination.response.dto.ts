@@ -21,20 +21,3 @@ export class CursorPaginationResponseDto<T> {
     this.pagination = pagination
   }
 }
-
-export function buildCursorPaginationResponse<T extends { id: number }>(
-  items: T[],
-  limit: number,
-) {
-  let nextCursor: number | null = null
-
-  if (items.length > limit) {
-    const nextItem = items.pop()
-    nextCursor = nextItem?.id ?? null
-  }
-
-  return new CursorPaginationResponseDto(
-    items,
-    new CursorPaginationMetaDto(limit, nextCursor),
-  )
-}

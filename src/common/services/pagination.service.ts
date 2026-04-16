@@ -10,7 +10,6 @@ interface ICursorPaginationOptions {
   defaultSort?: Record<string, 'asc' | 'desc'>
   cursorField?: string
 }
-
 @Injectable()
 export class CursorPaginationService {
   async paginate<T extends Record<string, any>>(
@@ -23,34 +22,18 @@ export class CursorPaginationService {
   ): Promise<CursorPaginationResponseDto<T>> {
     const { cursor, limit } = paginationDto
 
+    const safeLimit = limit ?? 10
     const cursorField = options?.cursorField || 'id'
 
-    let orderBy: Record<string, 'asc' | 'desc'> = {}
-
-    if (
-      paginationDto.sortBy &&
-      options?.sortAllowedFields?.includes(
-        paginationDto.sortBy.startsWith('-')
-          ? paginationDto.sortBy.slice(1)
-          : paginationDto.sortBy,
-      )
-    ) {
-      const isDesc = paginationDto.sortBy.startsWith('-')
-      const field = isDesc
-        ? paginationDto.sortBy.slice(1)
-        : paginationDto.sortBy
-
-      orderBy[field] = isDesc ? 'desc' : 'asc'
-    } else {
-      orderBy = options?.defaultSort || { [cursorField]: 'asc' }
-    }
+    // ✅ selalu konsisten dengan cursor
+    const orderBy = options?.defaultSort || { [cursorField]: 'asc' }
 
     const prismaCursor =
       cursor != null ? { [cursorField]: cursor } : undefined
 
     const items: T[] = await model.findMany({
       ...args,
-      take: limit + 1,
+      take: safeLimit + 1,
       cursor: prismaCursor,
       skip: cursor ? 1 : 0,
       orderBy,
@@ -58,14 +41,14 @@ export class CursorPaginationService {
 
     let nextCursor: any = null
 
-    if (items.length > limit) {
+    if (items.length > safeLimit) {
       const nextItem = items.pop()
       nextCursor = nextItem?.[cursorField] ?? null
     }
 
     return new CursorPaginationResponseDto(
       items,
-      new CursorPaginationMetaDto(limit, nextCursor),
+      new CursorPaginationMetaDto(safeLimit, nextCursor),
     )
   }
 }

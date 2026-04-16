@@ -16,6 +16,8 @@ export class ProductsRepository {
     });
   }
 
+  
+
   async findUnique(
     id: number,
     includeReviews = false,
@@ -32,4 +34,10 @@ export class ProductsRepository {
   async findById(id: number): Promise<Product | null> {
     return this.prisma.product.findUnique({ where: { id } });
   }
+
+  async findMany(args: any): Promise<Product[]> {
+  return this.prisma.product.findMany(args)
 }
+}
+
+
