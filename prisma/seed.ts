@@ -1,7 +1,10 @@
 import { PrismaClient } from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import pg from 'pg';
-import 'dotenv/config'
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 // Debug: Let's see if the URL is actually reaching the script
 if (!process.env.DATABASE_URL) {
