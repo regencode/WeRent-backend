@@ -2,7 +2,7 @@
 
 ## Endpoints
 
-BaseUrl: https://werent-backend-production.up.railway.app/
+BaseUrl: https://werent-backend-production.up.railway.app
 
 ### App
 GET / : Hello World!
