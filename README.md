@@ -2,12 +2,35 @@
 
 ## Endpoints
 
-Coming soon...
+BaseUrl: https://werent-backend-production.up.railway.app/
+
+### App
+GET /                : Hello World!
+
+### Reviews
+DELETE /reviews/{id} : delete reviews with id={id}
+
+GET /products/{id}/reviews : get all reviews of product (pagination for user story)
+
+POST /products/{id}/reviews : create review for product {id}
+
+PATCH /products/{id}/reviews/{reviewId}/upvote : upvote review at {reviewId}
+
+DELETE /products/{id}/reviews/{reviewId} : delete review {reviewId} of a product
+
+### Products
+GET /products : get all products (pagination not yet implemented EXTRA MILES)
+
+POST /products : create new product from body
+
+GET /products/{id} : get one product
+DELETE /products/{id} : delete one product and its reviews (cascade)
+
+
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-Docs: Coming soon...
+Documentation: https://werent-backend-production.up.railway.app/api
 
 ## Contributing
 
