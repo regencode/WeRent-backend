@@ -10,16 +10,16 @@ export class ReviewsService {
     private reviewsRepository: ReviewsRepository,
   ) {}
 
-  async findReviewsOfProduct(productId: number) {
-      return this.reviewsRepository.findByProductId(productId);
+  async findReviewsOfProduct(productId: number | string) {
+      return this.reviewsRepository.findByProductId(parseInt(productId as string));
   }
 
   async createReviewForProduct(dto: CreateReviewDto) {
       return this.reviewsRepository.create(dto);
   }
 
-  async upvoteReviewWithId(id: number) {
-      return this.reviewsRepository.upvoteReviewWithId(id);
+  async upvoteReviewWithId(id: number | string) {
+      return this.reviewsRepository.upvoteReviewWithId(parseInt(id as string));
   }
 
   async remove(id: number) {
