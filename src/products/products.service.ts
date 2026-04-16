@@ -12,11 +12,12 @@ export class ProductsService {
     return this.productsRepository.create({
       name: dto.name,
       price: dto.price,
+      imageUrls: dto.imageUrls
     });
   }
 
   async findAll(): Promise<Product[]> {
-    return this.productsRepository.findAll(true);
+    return this.productsRepository.findAll();
   }
 
   async findOne(id: number): Promise<Product> {
@@ -25,18 +26,6 @@ export class ProductsService {
       throw new NotFoundException(`Product with ID ${id} not found`);
     }
     return product;
-  }
-
-  async update(id: number, dto: UpdateProductDto): Promise<Product> {
-    const product = await this.productsRepository.findById(id);
-    if (!product) {
-      throw new NotFoundException(`Product with ID ${id} not found`);
-    }
-
-    return this.productsRepository.update(id, {
-      name: dto.name ?? undefined,
-      price: dto.price ?? undefined,
-    });
   }
 
   async remove(id: number): Promise<void> {

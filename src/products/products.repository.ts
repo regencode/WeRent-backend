@@ -25,14 +25,6 @@ export class ProductsRepository {
       include: { reviews: includeReviews },
     });
   }
-
-  async update(id: number, data: Prisma.ProductUpdateInput): Promise<Product> {
-    return this.prisma.product.update({
-      where: { id },
-      data,
-    });
-  }
-
   async delete(id: number): Promise<Product> {
     return this.prisma.product.delete({ where: { id } });
   }
