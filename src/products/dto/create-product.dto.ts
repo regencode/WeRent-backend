@@ -6,6 +6,14 @@ export class CreateProductDto {
   @IsNotEmpty()
   name: string;
 
+  @IsString()
+  @IsNotEmpty()
+  brand: string;
+
+  @IsString()
+  @IsNotEmpty()
+  description: string;
+
   @IsNumber()
   @IsNotEmpty()
   @Min(0)

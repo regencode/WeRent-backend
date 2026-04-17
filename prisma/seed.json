@@ -1,0 +1,782 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Floral Printed Mae Gown",
+      "brand": "Sachin & Babi",
+      "description": "The Sachin & Babi Floral Printed Mae Gown showcases a rich floral satin crepe in a flattering V-neck silhouette with elbow-length flutter sleeves. Pair it with strappy heels and a sleek clutch for a polished look that transitions effortlessly across seasons.",
+      "price": 95,
+      "rating": 0.0,
+      "createdAt": "2024-04-10T11:30:00.000Z",
+      "imageUrls": [
+        "https://pc-ap.rtrcdn.com/productimages/front/1080x/bd/SA244.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/side/1080x/bd/SA244.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/back/1080x/bd/SA244.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/editorial/1080x/bd/SA244.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/nomodel/1080x/bd/SA244.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Pearl Floral Tie Sleeve Gown",
+      "brand": "Sachin & Babi",
+      "description": "Elegant tie-sleeve gown perfect for spring weddings and galas. The pearl embellishments are delicate and the floral pattern adds a romantic touch to the silhouette.",
+      "price": 85,
+      "rating": 4.7,
+      "createdAt": "2024-03-15T10:00:00.000Z",
+      "imageUrls": [
+        "https://pc-ap.rtrcdn.com/productimages/front/1080x/d2/SA256.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/side/1080x/d2/SA256.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/back/1080x/d2/SA256.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/editorial/1080x/d2/SA256.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/nomodel/1080x/d2/SA256.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Magnolia Midi Dress",
+      "brand": "Sachin & Babi",
+      "description": "The Magnolia Midi Dress by Sachin & Babi is a stunning blend of elegance and comfort, featuring a chic silhouette and vivid floral hues. Pair this luxe midi dress with strappy sandals for a relaxed daytime look, or elevate it with heels and a clutch for a more sophisticated evening ensemble.",
+      "price": 70,
+      "rating": 4.8,
+      "createdAt": "2024-01-05T12:00:00.000Z",
+      "imageUrls": [
+        "https://pc-ap.rtrcdn.com/productimages/front/1080x/4c/SA236.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/side/1080x/4c/SA236.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/back/1080x/4c/SA236.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/editorial/1080x/4c/SA236.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/nomodel/1080x/4c/SA236.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Kaylee Sheer Top",
+      "brand": "AFRM",
+      "description": "The AFRM Mesh Kaylee Top is a sleek, long-sleeve mesh top featuring a flattering, fitted silhouette and a minimalist design. Layer this sheer piece over a simple black bra or camisole, pairing it with high-waisted leather pants and heels for a confident night-out look.",
+      "price": 150,
+      "rating": 4.5,
+      "createdAt": "2024-03-01T08:00:00.000Z",
+      "imageUrls": [
+        "https://pc-ap.rtrcdn.com/productimages/front/1080x/46/AFRM152.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/side/1080x/46/AFRM152.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/back/1080x/46/AFRM152.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/editorial/1080x/46/AFRM152.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/nomodel/1080x/46/AFRM152.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Kane Sequin Top",
+      "brand": "One of Others",
+      "description": "The One of Others Kane Sequin Top is a sleeveless, relaxed-fit top covered in a custom sequin fabrication, perfect for bringing glamour to your outfit. Tuck this dazzling piece into tailored black trousers and add simple heels for a refined, party-ready look.",
+      "price": 110,
+      "rating": 4.9,
+      "createdAt": "2024-02-20T09:00:00.000Z",
+      "imageUrls": [
+        "https://pc-ap.rtrcdn.com/productimages/front/1080x/2e/OOO12.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/side/1080x/2e/OOO12.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/back/1080x/2e/OOO12.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/editorial/1080x/2e/OOO12.jpg",
+        "https://pc-ap.rtrcdn.com/productimages/nomodel/1080x/2e/OOO12.jpg"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "productId": 2,
+      "reviewerName": "Inge Valentino",
+      "rating": 5.0,
+      "numUpvotes": 12,
+      "title": "Classy!",
+      "description": "The sleeves on this dress are absolutely unique and I received compliments all night. The fabric feels very high-end and didn't wrinkle easily.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/cc6/2433410.jpg",
+      "createdAt": "2024-03-20T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "productId": 2,
+      "reviewerName": "Rizal Balenciaga",
+      "rating": 4.0,
+      "numUpvotes": 5,
+      "title": "Nice fit",
+      "description": "It was a bit long for my height, so I had to wear my highest heels. Other than the length, the fit was perfect and very flattering.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-21T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "productId": 2,
+      "reviewerName": "Vincent Van Gown",
+      "rating": 5.0,
+      "numUpvotes": 8,
+      "title": "Wedding Guest Perfection",
+      "description": "I wore this to a spring wedding and it was the perfect choice. The colors are even more vibrant in person than they appear in the photos.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/144/2427476.jpg",
+      "createdAt": "2024-03-22T10:00:00.000Z"
+    },
+
+    {
+      "id": 4,
+      "productId": 3,
+      "reviewerName": "Thomas Tall-Heels",
+      "rating": 5.0,
+      "numUpvotes": 20,
+      "title": "Stunning",
+      "description": "The pattern is gorgeous and the dress flows beautifully when you walk. It was very comfortable to wear for an 8-hour event.",
+      "attachmentUrl": null,
+      "createdAt": "2024-01-10T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "productId": 3,
+      "reviewerName": "Ataka Armani",
+      "rating": 4.0,
+      "numUpvotes": 2,
+      "title": "Good quality",
+      "description": "The fabric is a bit thinner than I expected, but it worked well for an outdoor summer party. The sizing was true to the chart provided.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/3bf/2287246.jpg",
+      "createdAt": "2024-01-11T10:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "productId": 3,
+      "reviewerName": "Wahyu West-Vivienne",
+      "rating": 5.0,
+      "numUpvotes": 7,
+      "title": "Wow factor",
+      "description": "Everyone kept asking where I got this dress. It arrived in perfect condition and smelled like it just came from the professional cleaners.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/3bf/2287246.jpg",
+      "createdAt": "2024-01-12T10:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "productId": 3,
+      "reviewerName": "Bejo Bottega",
+      "rating": 5.0,
+      "numUpvotes": 15,
+      "title": "Lucky find",
+      "description": "I wasn't sure about the cut, but it fit like a glove. I will definitely be renting this brand again for my next formal occasion.",
+      "attachmentUrl": null,
+      "createdAt": "2024-01-13T10:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "productId": 3,
+      "reviewerName": "Rifky Rocha",
+      "rating": 4.5,
+      "numUpvotes": 3,
+      "title": "Elegant",
+      "description": "The neckline is very flattering and the waistline hits in just the right spot. It felt very posh and expensive to wear.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/21f/2432203.jpg",
+      "createdAt": "2024-01-14T10:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "productId": 3,
+      "reviewerName": "Perhisi Prada",
+      "rating": 4.0,
+      "numUpvotes": 1,
+      "title": "A bit tight",
+      "description": "The bust area was a little bit more restrictive than other dresses in this size. If you are between sizes, I would recommend sizing up for comfort.",
+      "attachmentUrl": null,
+      "createdAt": "2024-01-15T10:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "productId": 3,
+      "reviewerName": "Suci Satin-Silk",
+      "rating": 5.0,
+      "numUpvotes": 9,
+      "title": "Soft fabric",
+      "description": "The material feels like a dream against the skin. It has a beautiful subtle sheen that looks great in flash photography.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/689/2317085.jpg",
+      "createdAt": "2024-01-16T10:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "productId": 3,
+      "reviewerName": "Nabilah Nimble-Needle",
+      "rating": 5.0,
+      "numUpvotes": 4,
+      "title": "Well made",
+      "description": "The stitching and construction of this gown are top-notch. You can tell it is a designer piece just by the way the lining is finished.",
+      "attachmentUrl": null,
+      "createdAt": "2024-01-17T10:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "productId": 3,
+      "reviewerName": "Yodha Yamamoto",
+      "rating": 5.0,
+      "numUpvotes": 6,
+      "title": "Bold style",
+      "description": "The silhouette is very striking and modern. I loved the way the skirt moved on the dance floor.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/ac8/2253946.jpg",
+      "createdAt": "2024-01-18T10:00:00.000Z"
+    },
+    {
+      "id": 13,
+      "productId": 3,
+      "reviewerName": "RizalSDC Saint-Laurent",
+      "rating": 4.0,
+      "numUpvotes": 2,
+      "title": "Chic look",
+      "description": "It’s a very stylish dress that stands out in a crowd. It arrived early and the return process was super simple.",
+      "attachmentUrl": null,
+      "createdAt": "2024-01-19T10:00:00.000Z"
+    },
+
+    {
+      "id": 14,
+      "productId": 4,
+      "reviewerName": "Inge In-Fashion",
+      "rating": 5.0,
+      "numUpvotes": 10,
+      "title": "Velvet Dream",
+      "description": "The velvet is so plush and high quality. It was perfect for a winter gala and kept me quite warm.",
+      "attachmentUrl": null,
+      "createdAt": "2024-02-21T10:00:00.000Z"
+    },
+    {
+      "id": 15,
+      "productId": 4,
+      "reviewerName": "Rizal Ready-To-Wear",
+      "rating": 5.0,
+      "numUpvotes": 4,
+      "title": "Statuesque",
+      "description": "I felt like a movie star in this column gown. The emerald color is deep and rich, looking better than the photos.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/9ac/2426652.jpg",
+      "createdAt": "2024-02-22T10:00:00.000Z"
+    },
+    {
+      "id": 16,
+      "productId": 4,
+      "reviewerName": "Vincent Velvet-Vibes",
+      "rating": 4.5,
+      "numUpvotes": 2,
+      "title": "Sparkly Detail",
+      "description": "The crystals on the neck are secure and very bright. I didn't even need to wear a necklace with this look.",
+      "attachmentUrl": null,
+      "createdAt": "2024-02-23T10:00:00.000Z"
+    },
+    {
+      "id": 17,
+      "productId": 4,
+      "reviewerName": "Thomas Tuxedo-Tail",
+      "rating": 5.0,
+      "numUpvotes": 1,
+      "title": "Sharp Look",
+      "description": "The cut is very architectural and clean. It provides a great shape while still being comfortable enough to sit in.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/60b/2424435.jpg",
+      "createdAt": "2024-02-24T10:00:00.000Z"
+    },
+    {
+      "id": 18,
+      "productId": 4,
+      "reviewerName": "Ataka All-Dressed-Up",
+      "rating": 5.0,
+      "numUpvotes": 8,
+      "title": "Perfect Length",
+      "description": "With a 3-inch heel, this hit exactly where it needed to. The velvet has a nice stretch to it which helped with the fit.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/c51/2427608.jpg",
+      "createdAt": "2024-02-25T10:00:00.000Z"
+    },
+    {
+      "id": 19,
+      "productId": 4,
+      "reviewerName": "Wahyu Wardrobe-Goals",
+      "rating": 4.0,
+      "numUpvotes": 3,
+      "title": "Heavy Fabric",
+      "description": "Just a heads up that this dress is quite heavy due to the velvet. It feels very expensive, but be prepared for the weight.",
+      "attachmentUrl": null,
+      "createdAt": "2024-02-26T10:00:00.000Z"
+    },
+    {
+      "id": 20,
+      "productId": 4,
+      "reviewerName": "Bejo Best-Dressed",
+      "rating": 5.0,
+      "numUpvotes": 14,
+      "title": "Gala Ready",
+      "description": "I won best dressed at the charity event thanks to this gown! The delivery was prompt and the garment bag kept it safe.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/8b4/2417075.jpg",
+      "createdAt": "2024-02-27T10:00:00.000Z"
+    },
+    {
+      "id": 21,
+      "productId": 4,
+      "reviewerName": "Rifky Runway-Ready",
+      "rating": 5.0,
+      "numUpvotes": 5,
+      "title": "Exquisite",
+      "description": "The construction of the bodice is very supportive. I felt secure all night and didn't have to keep adjusting it.",
+      "attachmentUrl": null,
+      "createdAt": "2024-02-28T10:00:00.000Z"
+    },
+    {
+      "id": 22,
+      "productId": 4,
+      "reviewerName": "Perhisi Posh-Prints",
+      "rating": 4.5,
+      "numUpvotes": 0,
+      "title": "Classy Emerald",
+      "description": "The green color is a true jewel tone. It stood out beautifully against the standard black dresses at the party.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/75d/2410439.jpg",
+      "createdAt": "2024-03-01T10:00:00.000Z"
+    },
+
+    {
+      "id": 23,
+      "productId": 4,
+      "reviewerName": "Suci Style-Icon",
+      "rating": 5.0,
+      "numUpvotes": 6,
+      "title": "Sophisticated",
+      "description": "This is a very mature and sophisticated look. It worked perfectly for my company's holiday ball.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/12f/2327650-cropped.jpg",
+      "createdAt": "2024-03-02T10:00:00.000Z"
+    },
+    {
+      "id": 24,
+      "productId": 4,
+      "reviewerName": "Nabilah Night-Out",
+      "rating": 4.0,
+      "numUpvotes": 2,
+      "title": "Classic",
+      "description": "A timeless design that will never go out of style. The velvet was soft and not itchy at all.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-03T10:00:00.000Z"
+    },
+    {
+      "id": 25,
+      "productId": 4,
+      "reviewerName": "Yodha Yacht-Club",
+      "rating": 5.0,
+      "numUpvotes": 3,
+      "title": "Fancy",
+      "description": "I wore this to a gala on a ship and felt very appropriate. The dress stayed in place even with the ocean breeze.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/d33/2423286.jpg",
+      "createdAt": "2024-03-04T10:00:00.000Z"
+    },
+    {
+      "id": 26,
+      "productId": 4,
+      "reviewerName": "RizalSDC Silk-Road",
+      "rating": 5.0,
+      "numUpvotes": 7,
+      "title": "Fantastic",
+      "description": "The velvet has a beautiful nap and sheen. It looked very high-end under the ballroom lights.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-05T10:00:00.000Z"
+    },
+    {
+      "id": 27,
+      "productId": 4,
+      "reviewerName": "Inge In-Style",
+      "rating": 5.0,
+      "numUpvotes": 9,
+      "title": "Perfect",
+      "description": "Absolutely no complaints about this rental. It was clean, fit well, and made me feel gorgeous.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/675/2321059-cropped.jpg",
+      "createdAt": "2024-03-06T10:00:00.000Z"
+    },
+    {
+      "id": 28,
+      "productId": 4,
+      "reviewerName": "Rizal Red-Carpet",
+      "rating": 4.5,
+      "numUpvotes": 1,
+      "title": "Great",
+      "description": "The slit in the back makes it easy to walk and dance. It’s a thoughtful design element that combines style and function.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-07T10:00:00.000Z"
+    },
+    {
+      "id": 29,
+      "productId": 4,
+      "reviewerName": "Vincent Vogue",
+      "rating": 5.0,
+      "numUpvotes": 4,
+      "title": "Elite",
+      "description": "This is top-tier Badgley Mischka. The quality is exactly what you expect from such a high-end designer.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/3fe/2332319-cropped.jpg",
+      "createdAt": "2024-03-08T10:00:00.000Z"
+    },
+    {
+      "id": 30,
+      "productId": 4,
+      "reviewerName": "Thomas Trendsetter",
+      "rating": 5.0,
+      "numUpvotes": 2,
+      "title": "Amazing",
+      "description": "I got so many likes on my photos in this dress. It truly is a showstopper for any special occasion.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-09T10:00:00.000Z"
+    },
+    {
+      "id": 31,
+      "productId": 4,
+      "reviewerName": "Ataka Aesthetic",
+      "rating": 4.0,
+      "numUpvotes": 5,
+      "title": "Lovely",
+      "description": "The emerald green is very flattering on many skin tones. The dress has a nice weight that helps it hang perfectly.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/3fe/2332319-cropped.jpg",
+      "createdAt": "2024-03-10T10:00:00.000Z"
+    },
+    {
+      "id": 32,
+      "productId": 4,
+      "reviewerName": "Wahyu Wearable",
+      "rating": 5.0,
+      "numUpvotes": 8,
+      "title": "Comfortable",
+      "description": "Usually, column dresses are hard to move in, but this one was surprisingly flexible. I could actually breathe and eat dinner!",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-11T10:00:00.000Z"
+    },
+    {
+      "id": 33,
+      "productId": 4,
+      "reviewerName": "Bejo Ballroom",
+      "rating": 5.0,
+      "numUpvotes": 11,
+      "title": "Dazzling",
+      "description": "The crystals really catch the light when you turn. It was the perfect amount of sparkle for a winter formal.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/60b/2424435.jpg",
+      "createdAt": "2024-03-12T10:00:00.000Z"
+    },
+    {
+      "id": 34,
+      "productId": 5,
+      "reviewerName": "Inge Impeccable",
+      "rating": 5.0,
+      "numUpvotes": 15,
+      "title": "Fairytale",
+      "description": "I felt like a princess in this tulle gown. The layers are so airy and the fit was absolutely perfect.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/2d1/2351725-cropped.jpg",
+      "createdAt": "2024-03-02T10:00:00.000Z"
+    },
+    {
+      "id": 35,
+      "productId": 5,
+      "reviewerName": "Rizal Royal",
+      "rating": 4.0,
+      "numUpvotes": 3,
+      "title": "Tons of Tulle",
+      "description": "There is a lot of fabric here, so be prepared for a wide silhouette. It’s a stunning dress but takes up a bit of space!",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-03T10:00:00.000Z"
+    },
+    {
+      "id": 36,
+      "productId": 5,
+      "reviewerName": "Vincent Vestige",
+      "rating": 5.0,
+      "numUpvotes": 6,
+      "title": "Beautiful Bodice",
+      "description": "The boning in the bodice is very well done and provided excellent support. I didn't even need a bra.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/564/2430548-cropped.jpg",
+      "createdAt": "2024-03-04T10:00:00.000Z"
+    },
+    {
+      "id": 37,
+      "productId": 5,
+      "reviewerName": "Thomas Timeless",
+      "rating": 4.5,
+      "numUpvotes": 2,
+      "title": "Dreamy Gown",
+      "description": "The tulle is soft and high quality, not scratchy at all. It was a dream to wear to my sister's wedding.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-05T10:00:00.000Z"
+    },
+    {
+      "id": 38,
+      "productId": 5,
+      "reviewerName": "Ataka Allure",
+      "rating": 5.0,
+      "numUpvotes": 8,
+      "title": "Magical",
+      "description": "This dress made the whole night feel magical. It’s definitely a head-turner and very photogenic.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/e4c/2427391-cropped.jpg",
+      "createdAt": "2024-03-06T10:00:00.000Z"
+    },
+    {
+      "id": 39,
+      "productId": 5,
+      "reviewerName": "Wahyu Whimsical",
+      "rating": 5.0,
+      "numUpvotes": 4,
+      "title": "Great Experience",
+      "description": "The rental arrived on time and was in pristine condition. Returning it was a breeze with the prepaid label.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-07T10:00:00.000Z"
+    },
+    {
+      "id": 40,
+      "productId": 5,
+      "reviewerName": "Bejo Brilliant",
+      "rating": 4.0,
+      "numUpvotes": 1,
+      "title": "Elegant",
+      "description": "The design is very elegant and fits true to size. I would highly recommend this for anyone wanting a ballgown look.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/cf5/2424520-cropped.jpg",
+      "createdAt": "2024-03-08T10:00:00.000Z"
+    },
+    {
+      "id": 41,
+      "productId": 5,
+      "reviewerName": "Rifky Radiant",
+      "rating": 5.0,
+      "numUpvotes": 12,
+      "title": "Showstopper",
+      "description": "I've never felt more beautiful than I did in this dress. It truly is a showstopper for any major event.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/9ac/2411227-cropped.jpg",
+      "createdAt": "2024-03-09T10:00:00.000Z"
+    },
+    {
+      "id": 42,
+      "productId": 5,
+      "reviewerName": "Perhisi Polished",
+      "rating": 4.5,
+      "numUpvotes": 5,
+      "title": "Lovely Layers",
+      "description": "The layers of tulle are expertly gathered to create a voluminous skirt. It moves beautifully when you walk or dance.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-10T10:00:00.000Z"
+    },
+    {
+      "id": 43,
+      "productId": 5,
+      "reviewerName": "Suci Splendid",
+      "rating": 5.0,
+      "numUpvotes": 7,
+      "title": "High Quality",
+      "description": "You can really see the Marchesa quality in the details. Every seam is perfect and the tulle is very fine.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/b46/2398401-cropped.jpg",
+      "createdAt": "2024-03-11T10:00:00.000Z"
+    },
+    {
+      "id": 44,
+      "productId": 5,
+      "reviewerName": "Nabilah Notable",
+      "rating": 5.0,
+      "numUpvotes": 3,
+      "title": "Wonderful",
+      "description": "Everything about this rental was wonderful. I'll be using this service again for sure.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-12T10:00:00.000Z"
+    },
+    {
+      "id": 45,
+      "productId": 5,
+      "reviewerName": "Yodha Youthful",
+      "rating": 4.0,
+      "numUpvotes": 2,
+      "title": "Fun Dress",
+      "description": "It’s a very fun and youthful gown that’s perfect for a debutante ball or prom.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/656/2388585-cropped.jpg",
+      "createdAt": "2024-03-13T10:00:00.000Z"
+    },
+    {
+      "id": 46,
+      "productId": 5,
+      "reviewerName": "RizalSDC Superb",
+      "rating": 5.0,
+      "numUpvotes": 9,
+      "title": "Amazing Fit",
+      "description": "The fit was exactly as described in the sizing guide. It felt like it was tailored just for me.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-14T10:00:00.000Z"
+    },
+    {
+      "id": 47,
+      "productId": 5,
+      "reviewerName": "Inge Intricate",
+      "rating": 5.0,
+      "numUpvotes": 6,
+      "title": "Great Gown",
+      "description": "The intricate work on the bodice is stunning. It’s a high-fashion piece that feels very special to wear.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/4ee/2378297-cropped.jpg",
+      "createdAt": "2024-03-15T10:00:00.000Z"
+    },
+    {
+      "id": 48,
+      "productId": 5,
+      "reviewerName": "Rizal Ravishing",
+      "rating": 4.5,
+      "numUpvotes": 4,
+      "title": "So Pretty",
+      "description": "I loved the airy feel of the tulle. It was the perfect choice for an evening wedding.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-16T10:00:00.000Z"
+    },
+    {
+      "id": 49,
+      "productId": 5,
+      "reviewerName": "Vincent Vibrant",
+      "rating": 5.0,
+      "numUpvotes": 2,
+      "title": "Stellar",
+      "description": "Absolutely stellar gown. The color and the cut are both incredibly flattering.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/2a1/2362239-cropped.jpg",
+      "createdAt": "2024-03-17T10:00:00.000Z"
+    },
+    {
+      "id": 50,
+      "productId": 5,
+      "reviewerName": "Thomas Top-Notch",
+      "rating": 5.0,
+      "numUpvotes": 5,
+      "title": "Exceptional",
+      "description": "The overall quality is exceptional. It arrived in a sturdy box and was ready to wear immediately.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-18T10:00:00.000Z"
+    },
+    {
+      "id": 51,
+      "productId": 5,
+      "reviewerName": "Ataka Alluring",
+      "rating": 4.0,
+      "numUpvotes": 1,
+      "title": "Chic",
+      "description": "A very chic and modern take on the traditional ballgown.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/d57/2361949-cropped.jpg",
+      "createdAt": "2024-03-19T10:00:00.000Z"
+    },
+    {
+      "id": 52,
+      "productId": 5,
+      "reviewerName": "Wahyu Wonderful",
+      "rating": 5.0,
+      "numUpvotes": 7,
+      "title": "Fantastic",
+      "description": "The best rental I've had so far. The dress was gorgeous and the process was so easy.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-20T10:00:00.000Z"
+    },
+    {
+      "id": 53,
+      "productId": 5,
+      "reviewerName": "Bejo Breathtaking",
+      "rating": 5.0,
+      "numUpvotes": 11,
+      "title": "Breathtaking",
+      "description": "The dress was literally breathtaking. I couldn't have asked for a better look for my special night.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/26a/2404155-cropped.jpg",
+      "createdAt": "2024-03-21T10:00:00.000Z"
+    },
+    {
+      "id": 54,
+      "productId": 5,
+      "reviewerName": "Rifky Remarkable",
+      "rating": 5.0,
+      "numUpvotes": 8,
+      "title": "Superb",
+      "description": "Everything from the fabric to the fit was superb. It made a huge impression on everyone at the party.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-22T10:00:00.000Z"
+    },
+    {
+      "id": 55,
+      "productId": 5,
+      "reviewerName": "Perhisi Prime",
+      "rating": 4.5,
+      "numUpvotes": 3,
+      "title": "Excellent",
+      "description": "The dress was in prime condition and looked brand new.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/f3a/2400294-cropped.jpg",
+      "createdAt": "2024-03-23T10:00:00.000Z"
+    },
+    {
+      "id": 56,
+      "productId": 5,
+      "reviewerName": "Suci Sincere",
+      "rating": 5.0,
+      "numUpvotes": 6,
+      "title": "Loved It",
+      "description": "It exceeded all of my expectations for a rental.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-24T10:00:00.000Z"
+    },
+    {
+      "id": 57,
+      "productId": 5,
+      "reviewerName": "Nabilah Nice",
+      "rating": 4.0,
+      "numUpvotes": 2,
+      "title": "Very Good",
+      "description": "A very nice dress that fit perfectly.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/b3c/2367328-cropped.jpg",
+      "createdAt": "2024-03-25T10:00:00.000Z"
+    },
+    {
+      "id": 58,
+      "productId": 5,
+      "reviewerName": "Yodha Yonder",
+      "rating": 5.0,
+      "numUpvotes": 5,
+      "title": "Dream Dress",
+      "description": "It was everything I wanted.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-26T10:00:00.000Z"
+    },
+    {
+      "id": 59,
+      "productId": 5,
+      "reviewerName": "RizalSDC Stellar",
+      "rating": 5.0,
+      "numUpvotes": 4,
+      "title": "Outstanding",
+      "description": "It made me feel like the belle of the ball.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/8e2/2353846-cropped.jpg",
+      "createdAt": "2024-03-27T10:00:00.000Z"
+    },
+    {
+      "id": 60,
+      "productId": 5,
+      "reviewerName": "Inge Ideal",
+      "rating": 5.0,
+      "numUpvotes": 7,
+      "title": "Ideal Choice",
+      "description": "Comfortable, stylish, and fit like a dream.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-28T10:00:00.000Z"
+    },
+    {
+      "id": 61,
+      "productId": 5,
+      "reviewerName": "Rizal Radiant",
+      "rating": 4.5,
+      "numUpvotes": 3,
+      "title": "Glowing",
+      "description": "The tulle catches the light beautifully.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/4a2/2351299-cropped.jpg",
+      "createdAt": "2024-03-29T10:00:00.000Z"
+    },
+    {
+      "id": 62,
+      "productId": 5,
+      "reviewerName": "Vincent Verve",
+      "rating": 5.0,
+      "numUpvotes": 9,
+      "title": "Perfectly Posh",
+      "description": "It made the entire night feel extra special.",
+      "attachmentUrl": null,
+      "createdAt": "2024-03-30T10:00:00.000Z"
+    },
+    {
+      "id": 63,
+      "productId": 5,
+      "reviewerName": "Thomas Top-Class",
+      "rating": 5.0,
+      "numUpvotes": 6,
+      "title": "Elite Rental",
+      "description": "The quality of the tulle and the construction are second to none.",
+      "attachmentUrl": "https://r-ap.rtrcdn.com/reviewimages/2be/2354547-cropped.jpg",
+      "createdAt": "2024-03-31T10:00:00.000Z"
+    }
+  ]
+}
