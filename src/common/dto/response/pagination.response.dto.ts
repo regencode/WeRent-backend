@@ -1,3 +1,4 @@
+// src/common/dto/response/cursor-pagination.response.dto.ts
 export class CursorPaginationMetaDto {
   limit: number
   nextCursor: number | null

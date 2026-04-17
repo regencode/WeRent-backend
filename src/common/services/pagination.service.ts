@@ -6,16 +6,14 @@ import {
 } from '../dto/response/pagination.response.dto'
 
 interface ICursorPaginationOptions {
-  sortAllowedFields?: string[]
-  defaultSort?: Record<string, 'asc' | 'desc'>
   cursorField?: string
+  orderDirection?: 'asc' | 'desc'
 }
+
 @Injectable()
 export class CursorPaginationService {
   async paginate<T extends Record<string, any>>(
-    model: {
-      findMany: Function
-    },
+    model: { findMany: Function },
     paginationDto: CursorPaginationRequestDto,
     args: any = {},
     options?: ICursorPaginationOptions,
@@ -23,23 +21,26 @@ export class CursorPaginationService {
     const { cursor, limit } = paginationDto
 
     const safeLimit = limit ?? 10
-    const cursorField = options?.cursorField || 'id'
+    const cursorField = options?.cursorField ?? 'id'
+    const orderDirection = options?.orderDirection ?? 'asc'
 
-    // ✅ selalu konsisten dengan cursor
-    const orderBy = options?.defaultSort || { [cursorField]: 'asc' }
+    // ✅ cursor & orderBy HARUS field yang sama
+    const orderBy = {
+      [cursorField]: orderDirection,
+    }
 
     const prismaCursor =
-      cursor != null ? { [cursorField]: cursor } : undefined
+      cursor !== undefined ? { [cursorField]: cursor } : undefined
 
     const items: T[] = await model.findMany({
       ...args,
       take: safeLimit + 1,
       cursor: prismaCursor,
-      skip: cursor ? 1 : 0,
+      skip: cursor !== undefined ? 1 : 0,
       orderBy,
     })
 
-    let nextCursor: any = null
+    let nextCursor: number | null = null
 
     if (items.length > safeLimit) {
       const nextItem = items.pop()
