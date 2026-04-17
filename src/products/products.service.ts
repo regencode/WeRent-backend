@@ -16,6 +16,8 @@ export class ProductsService {
   async create(dto: CreateProductDto): Promise<Product> {
     return this.productsRepository.create({
       name: dto.name,
+      brand: dto.brand,
+      description: dto.description,
       price: dto.price,
       imageUrls: dto.imageUrls,
     })
