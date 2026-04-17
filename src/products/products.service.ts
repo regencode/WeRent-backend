@@ -22,20 +22,11 @@ export class ProductsService {
     })
   }
 
-  /**
-   * ✅ Cursor-based pagination (stable & scalable)
-   */
   async findAll(paginationDto: CursorPaginationRequestDto) {
     return this.paginationService.paginate<Product>(
       this.productsRepository,
       paginationDto,
       {
-        // 🔥 tempat future improvement
-        // where: { price: { gt: 10000 } },
-        // include: { reviews: true },
-      },
-      {
-        // ✅ gunakan field yang UNIQUE & STABLE
         cursorField: 'id',
         orderDirection: 'asc',
       },

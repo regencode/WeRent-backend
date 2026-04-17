@@ -1,4 +1,4 @@
-import { IsOptional, IsInt, Min } from 'class-validator'
+import { IsOptional, IsInt, Min, Max } from 'class-validator'
 import { Transform, Type } from 'class-transformer'
 
 export class CursorPaginationRequestDto {
@@ -8,14 +8,17 @@ export class CursorPaginationRequestDto {
     value !== undefined ? Number(value) : undefined,
   )
   @IsInt()
+  @Min(1)
   cursor?: number
 
   @IsOptional()
   @Type(() => Number)
-  @Transform(({ value }) =>
-    value !== undefined ? Number(value) : 10,
-  )
+  @Transform(({ value }) => {
+    const num = value !== undefined ? Number(value) : 10
+    return Math.min(num, 10)
+  })
   @IsInt()
   @Min(1)
+  @Max(10)
   limit?: number
 }

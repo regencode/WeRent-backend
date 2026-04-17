@@ -27,9 +27,6 @@ export class ProductsController {
     return this.productsService.create(dto)
   }
 
-  /**
-   * ✅ Cursor pagination for products
-   */
   @Get()
   findAll(@Query() paginationDto: CursorPaginationRequestDto) {
     return this.productsService.findAll(paginationDto)
@@ -45,9 +42,6 @@ export class ProductsController {
     return this.productsService.remove(id)
   }
 
-  /**
-   * ✅ Cursor pagination for reviews (nested)
-   */
   @Get(':id/reviews')
   findAllReviewsOfProduct(
     @Param('id', ParseIntPipe) productId: number,

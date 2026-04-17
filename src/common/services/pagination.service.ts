@@ -23,8 +23,6 @@ export class CursorPaginationService {
     const safeLimit = limit ?? 10
     const cursorField = options?.cursorField ?? 'id'
     const orderDirection = options?.orderDirection ?? 'asc'
-
-    // ✅ cursor & orderBy HARUS field yang sama
     const orderBy = {
       [cursorField]: orderDirection,
     }
