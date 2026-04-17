@@ -40,4 +40,8 @@ export class ReviewsRepository {
           where: { id },
       });
   }
+
+  async findMany(args: any) {
+  return this.prisma.review.findMany(args)
+}
 }

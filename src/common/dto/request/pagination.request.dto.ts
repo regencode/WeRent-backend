@@ -1,4 +1,3 @@
-// src/common/dto/request/cursor-pagination.request.dto.ts
 import { IsOptional, IsInt, Min } from 'class-validator'
 import { Transform, Type } from 'class-transformer'
 

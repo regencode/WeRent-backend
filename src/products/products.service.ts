@@ -1,7 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common'
 import { ProductsRepository } from './products.repository'
 import { CreateProductDto } from './dto/create-product.dto'
-import { UpdateProductDto } from './dto/update-product.dto'
 import { Product } from '@prisma/client'
 import { CursorPaginationService } from '@/common/services/pagination.service'
 import { CursorPaginationRequestDto } from '@/common/dto/request/pagination.request.dto'
@@ -9,8 +8,8 @@ import { CursorPaginationRequestDto } from '@/common/dto/request/pagination.requ
 @Injectable()
 export class ProductsService {
   constructor(
-    private productsRepository: ProductsRepository,
-    private paginationService: CursorPaginationService,
+    private readonly productsRepository: ProductsRepository,
+    private readonly paginationService: CursorPaginationService,
   ) {}
 
   async create(dto: CreateProductDto): Promise<Product> {
@@ -23,15 +22,22 @@ export class ProductsService {
     })
   }
 
-  // penambahan parameter paginationDto untuk menerima parameter pagination dari request
+  /**
+   * ✅ Cursor-based pagination (stable & scalable)
+   */
   async findAll(paginationDto: CursorPaginationRequestDto) {
-    return this.paginationService.paginate(
+    return this.paginationService.paginate<Product>(
       this.productsRepository,
       paginationDto,
-      {},
       {
-        sortAllowedFields: ['createdAt', 'price'],
-        defaultSort: { createdAt: 'desc' },
+        // 🔥 tempat future improvement
+        // where: { price: { gt: 10000 } },
+        // include: { reviews: true },
+      },
+      {
+        // ✅ gunakan field yang UNIQUE & STABLE
+        cursorField: 'id',
+        orderDirection: 'asc',
       },
     )
   }

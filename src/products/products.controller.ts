@@ -7,6 +7,7 @@ import {
   Param,
   Delete,
   Query,
+  ParseIntPipe,
 } from '@nestjs/common'
 import { ProductsService } from './products.service'
 import { ReviewsService } from '@/reviews/reviews.service'
@@ -26,31 +27,41 @@ export class ProductsController {
     return this.productsService.create(dto)
   }
 
-  // ✅ Tambah pagination (tanpa ubah flow besar)
+  /**
+   * ✅ Cursor pagination for products
+   */
   @Get()
   findAll(@Query() paginationDto: CursorPaginationRequestDto) {
     return this.productsService.findAll(paginationDto)
   }
 
   @Get(':id')
-  findOne(@Param('id') productId: string) {
-    return this.productsService.findOne(Number(productId))
+  findOne(@Param('id', ParseIntPipe) productId: number) {
+    return this.productsService.findOne(productId)
   }
 
   @Delete(':id')
-  removeProduct(@Param('id') id: string) {
-    return this.productsService.remove(Number(id))
+  removeProduct(@Param('id', ParseIntPipe) id: number) {
+    return this.productsService.remove(id)
   }
 
-  // ❌ belum kita ubah (sesuai request kamu fokus product dulu)
+  /**
+   * ✅ Cursor pagination for reviews (nested)
+   */
   @Get(':id/reviews')
-  findAllReviewsOfProduct(@Param('id') productId: number) {
-    return this.reviewsService.findReviewsOfProduct(productId)
+  findAllReviewsOfProduct(
+    @Param('id', ParseIntPipe) productId: number,
+    @Query() paginationDto: CursorPaginationRequestDto,
+  ) {
+    return this.reviewsService.findReviewsOfProduct(
+      productId,
+      paginationDto,
+    )
   }
 
   @Post(':id/reviews')
   createReviewForProduct(
-    @Param('id') productId: number,
+    @Param('id', ParseIntPipe) productId: number,
     @Body() dto: CreateReviewDto,
   ) {
     dto.productId = productId
@@ -58,12 +69,16 @@ export class ProductsController {
   }
 
   @Patch(':id/reviews/:reviewId/upvote')
-  upvoteReviewOfProduct(@Param('reviewId') reviewId: number) {
+  upvoteReviewOfProduct(
+    @Param('reviewId', ParseIntPipe) reviewId: number,
+  ) {
     return this.reviewsService.upvoteReviewWithId(reviewId)
   }
 
   @Delete(':id/reviews/:reviewId')
-  removeReview(@Param('reviewId') reviewId: number) {
-    this.reviewsService.remove(reviewId)
+  removeReview(
+    @Param('reviewId', ParseIntPipe) reviewId: number,
+  ) {
+    return this.reviewsService.remove(reviewId)
   }
 }

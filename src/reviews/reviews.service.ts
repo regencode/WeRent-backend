@@ -1,28 +1,46 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { ReviewsRepository } from './reviews.repository';
-import { CreateReviewDto } from './dto/create-review.dto';
-import { UpdateReviewDto } from './dto/update-review.dto';
-import { Review } from '@prisma/client';
+import { Injectable } from '@nestjs/common'
+import { ReviewsRepository } from './reviews.repository'
+import { CreateReviewDto } from './dto/create-review.dto'
+import { Review } from '@prisma/client'
+import { CursorPaginationService } from '@/common/services/pagination.service'
+import { CursorPaginationRequestDto } from '@/common/dto/request/pagination.request.dto'
 
 @Injectable()
 export class ReviewsService {
   constructor(
-    private reviewsRepository: ReviewsRepository,
+    private readonly reviewsRepository: ReviewsRepository,
+    private readonly paginationService: CursorPaginationService,
   ) {}
 
-  async findReviewsOfProduct(productId: number | string) {
-      return this.reviewsRepository.findByProductId(parseInt(productId as string));
+  /**
+   * ✅ Cursor pagination tetap nested di product
+   */
+  async findReviewsOfProduct(
+    productId: number,
+    paginationDto: CursorPaginationRequestDto,
+  ) {
+    return this.paginationService.paginate<Review>(
+      this.reviewsRepository,
+      paginationDto,
+      {
+        where: { productId },
+      },
+      {
+        cursorField: 'id',
+        orderDirection: 'asc',
+      },
+    )
   }
 
   async createReviewForProduct(dto: CreateReviewDto) {
-      return this.reviewsRepository.create(dto);
+    return this.reviewsRepository.create(dto)
   }
 
-  async upvoteReviewWithId(id: number | string) {
-      return this.reviewsRepository.upvoteReviewWithId(parseInt(id as string));
+  async upvoteReviewWithId(id: number) {
+    return this.reviewsRepository.upvoteReviewWithId(id)
   }
 
   async remove(id: number) {
-      this.reviewsRepository.remove(id);
+    return this.reviewsRepository.remove(id)
   }
 }
