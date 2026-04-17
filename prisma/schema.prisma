@@ -10,8 +10,8 @@ model Product {
     id         Int       @id              @default(autoincrement())
     createdAt  DateTime  @default(now())  
     name       String                     
-    brand       String                     
-    description       String                     
+    brand       String?
+    description  String?
     price      Int                        
     rating     Float     @default(0.0)    
     imageUrls  String[]
