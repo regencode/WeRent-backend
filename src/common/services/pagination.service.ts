@@ -19,12 +19,10 @@ export class CursorPaginationService {
     options?: ICursorPaginationOptions,
   ): Promise<CursorPaginationResponseDto<T>> {
     const { cursor, limit } = paginationDto
-
     const safeLimit = limit ?? 10
     const cursorField = options?.cursorField ?? 'id'
     const orderDirection = options?.orderDirection ?? 'asc'
 
-    // ✅ cursor & orderBy HARUS field yang sama
     const orderBy = {
       [cursorField]: orderDirection,
     }
@@ -41,7 +39,6 @@ export class CursorPaginationService {
     })
 
     let nextCursor: number | null = null
-
     if (items.length > safeLimit) {
       const nextItem = items.pop()
       nextCursor = nextItem?.[cursorField] ?? null
