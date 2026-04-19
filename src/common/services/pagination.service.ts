@@ -19,10 +19,10 @@ export class CursorPaginationService {
     options?: ICursorPaginationOptions,
   ): Promise<CursorPaginationResponseDto<T>> {
     const { cursor, limit } = paginationDto
-
     const safeLimit = limit ?? 10
     const cursorField = options?.cursorField ?? 'id'
     const orderDirection = options?.orderDirection ?? 'asc'
+
     const orderBy = {
       [cursorField]: orderDirection,
     }
@@ -30,6 +30,8 @@ export class CursorPaginationService {
     const prismaCursor =
       cursor !== undefined ? { [cursorField]: cursor } : undefined
 
+    // ✅ FIXED: Hanya pass argument yang valid untuk Prisma
+    // Hapus cursorField dan orderDirection - bukan argument Prisma!
     const items: T[] = await model.findMany({
       ...args,
       take: safeLimit + 1,
@@ -39,7 +41,6 @@ export class CursorPaginationService {
     })
 
     let nextCursor: number | null = null
-
     if (items.length > safeLimit) {
       const nextItem = items.pop()
       nextCursor = nextItem?.[cursorField] ?? null

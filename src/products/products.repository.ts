@@ -16,8 +16,6 @@ export class ProductsRepository {
     });
   }
 
-  
-
   async findUnique(
     id: number,
     includeReviews = false,
@@ -27,6 +25,7 @@ export class ProductsRepository {
       include: { reviews: includeReviews },
     });
   }
+
   async delete(id: number): Promise<Product> {
     return this.prisma.product.delete({ where: { id } });
   }
@@ -36,8 +35,8 @@ export class ProductsRepository {
   }
 
   async findMany(args: any): Promise<Product[]> {
-  return this.prisma.product.findMany(args)
+    // FIXED: Filter out invalid Prisma arguments
+    const { cursorField, orderDirection, ...prismaArgs } = args;
+    return this.prisma.product.findMany(prismaArgs);
+  }
 }
-}
-
-
