@@ -6,58 +6,73 @@ import {
   Patch,
   Param,
   Delete,
-} from '@nestjs/common';
-import { ProductsService } from './products.service';
-import { ReviewsService } from '@/reviews/reviews.service';
-import { CreateProductDto } from './dto/create-product.dto';
-import { CreateReviewDto } from '@/reviews/dto/create-review.dto';
+  Query,
+  ParseIntPipe,
+} from '@nestjs/common'
+import { ProductsService } from './products.service'
+import { ReviewsService } from '@/reviews/reviews.service'
+import { CreateProductDto } from './dto/create-product.dto'
+import { CreateReviewDto } from '@/reviews/dto/create-review.dto'
+import { CursorPaginationRequestDto } from '@/common/dto/request/pagination.request.dto'
 
 @Controller('products')
 export class ProductsController {
-  constructor(private readonly productsService: ProductsService,
-              private readonly reviewsService: ReviewsService) {}
+  constructor(
+    private readonly productsService: ProductsService,
+    private readonly reviewsService: ReviewsService,
+  ) {}
 
   @Post()
-  create(@Body() createProductDto: CreateProductDto) {
-    return this.productsService.create(createProductDto);
+  create(@Body() dto: CreateProductDto) {
+    return this.productsService.create(dto)
   }
 
   @Get()
-  findAll() {
-      // TODO: pagination (extra mile)
-    return this.productsService.findAll();
+  findAll(@Query() paginationDto: CursorPaginationRequestDto) {
+    return this.productsService.findAll(paginationDto)
   }
 
   @Get(':id')
-  findOne(@Param('id') productId: number) {
-    return this.productsService.findOne(+productId);
+  findOne(@Param('id', ParseIntPipe) productId: number) {
+    return this.productsService.findOne(productId)
   }
 
   @Delete(':id')
-  removeProduct(@Param('id') id: string) {
-    return this.productsService.remove(+id);
+  removeProduct(@Param('id', ParseIntPipe) id: number) {
+    return this.productsService.remove(id)
   }
 
   @Get(':id/reviews')
-  findAllReviewsOfProduct(@Param('id') productId: number) {
-      // TODO: pagination (user story)
-    return this.reviewsService.findReviewsOfProduct(productId);
+  findAllReviewsOfProduct(
+    @Param('id', ParseIntPipe) productId: number,
+    @Query() paginationDto: CursorPaginationRequestDto,
+  ) {
+    return this.reviewsService.findReviewsOfProduct(
+      productId,
+      paginationDto,
+    )
   }
 
   @Post(':id/reviews')
-  createReviewForProduct(@Param('id') productId: number, @Body() dto: CreateReviewDto) {
-    dto.productId = productId;
-    return this.reviewsService.createReviewForProduct(dto);
+  createReviewForProduct(
+    @Param('id', ParseIntPipe) productId: number,
+    @Body() dto: CreateReviewDto,
+  ) {
+    dto.productId = productId
+    return this.reviewsService.createReviewForProduct(dto)
   }
 
   @Patch(':id/reviews/:reviewId/upvote')
-  upvoteReviewOfProduct(@Param('reviewId') reviewId: number) {
-    return this.reviewsService.upvoteReviewWithId(reviewId);
+  upvoteReviewOfProduct(
+    @Param('reviewId', ParseIntPipe) reviewId: number,
+  ) {
+    return this.reviewsService.upvoteReviewWithId(reviewId)
   }
 
   @Delete(':id/reviews/:reviewId')
-  removeReview(@Param('reviewId') reviewId: number) {
-      this.reviewsService.remove(reviewId);
+  removeReview(
+    @Param('reviewId', ParseIntPipe) reviewId: number,
+  ) {
+    return this.reviewsService.remove(reviewId)
   }
-
 }
