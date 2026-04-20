@@ -27,7 +27,6 @@ async function main() {
   for (const product of data.products) {
     await prisma.product.create({
       data: {
-        id: product.id,
         name: product.name,
         brand: product.brand, // Included from your new JSON
         description: product.description, // Included from your new JSON
@@ -44,7 +43,6 @@ async function main() {
   for (const review of data.reviews) {
     await prisma.review.create({
       data: {
-        id: review.id,
         productId: review.productId,
         reviewerName: review.reviewerName,
         title: review.title,
