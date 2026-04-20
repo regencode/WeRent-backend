@@ -4,6 +4,7 @@ import pg from 'pg';
 import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
+import { ProductsService } from '@/products/products.service';
 
 // 1. Setup the standard 'pg' pool
 const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
@@ -18,6 +19,7 @@ async function main() {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(fileContent);
 
+
   // 3. Wipe existing data (Cascade handles reviews)
   await prisma.product.deleteMany();
   console.log('Existing data cleared.');
@@ -27,11 +29,11 @@ async function main() {
   for (const product of data.products) {
     await prisma.product.create({
       data: {
+        id: product.id,
         name: product.name,
         brand: product.brand, // Included from your new JSON
         description: product.description, // Included from your new JSON
         price: product.price,
-        rating: product.rating,
         imageUrls: product.imageUrls,
         createdAt: new Date(product.createdAt),
       },
@@ -43,6 +45,7 @@ async function main() {
   for (const review of data.reviews) {
     await prisma.review.create({
       data: {
+        id: review.id,
         productId: review.productId,
         reviewerName: review.reviewerName,
         title: review.title,
@@ -54,6 +57,14 @@ async function main() {
       },
     });
   }
+
+  // Reset sequences to match highest IDs in database
+  await prisma.$executeRaw`
+  SELECT setval('Product_id_seq', (SELECT MAX(id) FROM "Product"))
+  `;
+  await prisma.$executeRaw`
+  SELECT setval('Review_id_seq', (SELECT MAX(id) FROM "Review"))
+  `;
 
   console.log('--- Seeding Process Finished Successfully ---');
 }

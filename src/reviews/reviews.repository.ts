@@ -15,7 +15,7 @@ export class ReviewsRepository {
         rating: dto.rating,
         description: dto.description,
         attachmentUrl: dto.attachmentUrl,
-        product: { connect: { id: dto.productId } },
+        product: { connect: { id: dto.productId }}
       },
     });
   }
