@@ -26,6 +26,7 @@ export class ReviewsRepository {
     });
   }
 
+
   async upvoteReviewWithId(id: number): Promise<Review> {
       return this.prisma.review.update({
           where: { id },
@@ -34,6 +35,7 @@ export class ReviewsRepository {
           }
       });
   }
+
 
   async remove(id: number): Promise<Review> {
       return this.prisma.review.delete({

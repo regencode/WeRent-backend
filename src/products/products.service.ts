@@ -36,12 +36,11 @@ export class ProductsService {
         data: await Promise.all(result.data.map(async (product) => {
             return {
                 ...product,
-                rating: await this.productsRepository.averageRatingOfProduct(product.id) ?? 0.0
+                rating: await this.productsRepository.averageRatingOfProduct(product.id)
             }
         })),
     }
   }
-  
 
   async findOne(id: number): Promise<Product> {
     const product = await this.productsRepository.findUnique(id, true)
@@ -51,7 +50,7 @@ export class ProductsService {
     }
     return {
         ...product,
-        rating: await this.productsRepository.averageRatingOfProduct(product.id) ?? 0.0
+        rating: await this.productsRepository.averageRatingOfProduct(product.id)
     }
   }
 

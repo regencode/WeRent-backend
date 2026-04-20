@@ -18,12 +18,12 @@ export class ProductsRepository {
     });
   }
 
-  async averageRatingOfProduct(id: number) {
-      const agg = await this.prisma.product.aggregate({
-          where: { id },
+  async averageRatingOfProduct(productId: number): Promise<number> {
+      const agg = await this.prisma.review.aggregate({
+          where: { productId: productId },
           _avg: { rating: true }
       })
-      return agg._avg.rating;
+      return agg._avg.rating ?? 0;
   }
 
   async findUnique(

@@ -60,10 +60,10 @@ async function main() {
 
   // Reset sequences to match highest IDs in database
   await prisma.$executeRaw`
-  SELECT setval('Product_id_seq', (SELECT MAX(id) FROM "Product"))
+  SELECT setval('"Product_id_seq"', (SELECT MAX(id) FROM "Product"))
   `;
   await prisma.$executeRaw`
-  SELECT setval('Review_id_seq', (SELECT MAX(id) FROM "Review"))
+  SELECT setval('"Review_id_seq"', (SELECT MAX(id) FROM "Review"))
   `;
 
   console.log('--- Seeding Process Finished Successfully ---');
