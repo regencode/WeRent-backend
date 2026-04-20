@@ -12,8 +12,18 @@ export class ProductsRepository {
 
   async findAll(includeReviews = false): Promise<Product[]> {
     return this.prisma.product.findMany({
-      include: { reviews: includeReviews },
+      include: { 
+          reviews: includeReviews,
+      },
     });
+  }
+
+  async averageRatingOfProduct(id: number) {
+      const agg = await this.prisma.product.aggregate({
+          where: { id },
+          _avg: { rating: true }
+      })
+      return agg._avg.rating;
   }
 
   async findUnique(

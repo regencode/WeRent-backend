@@ -23,7 +23,7 @@ export class ProductsService {
   }
 
   async findAll(paginationDto: CursorPaginationRequestDto) {
-    return this.paginationService.paginate<Product>(
+    const result = await this.paginationService.paginate<Product>(
       this.productsRepository,
       paginationDto,
       {
@@ -31,7 +31,17 @@ export class ProductsService {
         orderDirection: 'asc',
       },
     )
+    return {
+        ...result,
+        data: await Promise.all(result.data.map(async (product) => {
+            return {
+                ...product,
+                rating: await this.productsRepository.averageRatingOfProduct(product.id) ?? 0.0
+            }
+        })),
+    }
   }
+  
 
   async findOne(id: number): Promise<Product> {
     const product = await this.productsRepository.findUnique(id, true)
@@ -39,8 +49,10 @@ export class ProductsService {
     if (!product) {
       throw new NotFoundException(`Product with ID ${id} not found`)
     }
-
-    return product
+    return {
+        ...product,
+        rating: await this.productsRepository.averageRatingOfProduct(product.id) ?? 0.0
+    }
   }
 
   async remove(id: number): Promise<void> {
