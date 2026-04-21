@@ -7,9 +7,16 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
 
+    app.enableCors({
+        origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+        credentials: true,
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+        allowedHeaders: ['Content-Type', 'Authorization'],
+    });
+
     app.useGlobalPipes(
-    new ValidationPipe({
-      transform: true,              // string → number
+        new ValidationPipe({
+            transform: true,              // string → number
       whitelist: true,              // buang field tidak dikenal
       forbidNonWhitelisted: true,   // error kalau ada field aneh
     }),
